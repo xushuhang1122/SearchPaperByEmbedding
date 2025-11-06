@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:openreview.net)",
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:docs.openreview.net)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

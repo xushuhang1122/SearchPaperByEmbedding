@@ -1,0 +1,141 @@
+[
+  {
+    "id": "lClK4uBxSG",
+    "number": 29227,
+    "title": "ModHiFi: Identifying High Fidelity predictive components for Model Modification",
+    "authors": [
+      "Dhruva Kashyap",
+      "Chaitanya Murti",
+      "Pranav K Nayak",
+      "Tanay Narshana",
+      "Chiranjib Bhattacharyya"
+    ],
+    "abstract": "Modifying well-trained models for purposes such as pruning or unlearning, without access to training data or the original loss function, is a challenging problem. While techniques exist for such modification, they often require training data, are computationally expensive, or are architecture-specific. To address this, we investigate the fundamental question of identifying components that are critical to the model’s predictive performance, without access to either gradients or the loss function, and with only distributional access such as synthetic data. \n    We theoretically demonstrate that the global reconstruction error is linearly bounded by local reconstruction errors for Lipschitz-continuous networks such as CNNs and well-trained Transformers (which, contrary to existing literature, we find exhibit Lipschitz continuity). This motivates using the locally reconstructive behavior of component subsets to quantify their global importance, via a metric that we term *Subset Fidelity*. In the uncorrelated features setting, selecting individual components via their Subset Fidelity scores is optimal, which we use to propose **ModHiFi**, an algorithm for model modification that requires no training data or loss function access. **ModHiFi-P**, for structured pruning, achieves an 11% speedup over the current state of the art on ImageNet models and competitive performance on language models. **ModHiFi-U**, for classwise unlearning, achieves complete unlearning on CIFAR-10 without fine-tuning and demonstrates competitive performance on Swin Transformers.",
+    "keywords": [
+      "Pruning",
+      "Machine Unlearning"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=lClK4uBxSG"
+  },
+  {
+    "id": "XsBzmJzJ2l",
+    "number": 29206,
+    "title": "The Structure of Relation Decoding Linear Operators in Large Language Models",
+    "authors": [
+      "Miranda Anna Christ",
+      "Adrián Csiszárik",
+      "Gergely Becsó",
+      "Dániel Varga"
+    ],
+    "abstract": "This paper investigates the structure of linear operators introduced in Hernandez et al. [2023] that decode specific relational facts in transformer language models. We extend their single-relation findings to a collection of relations and systematically chart their organization. We show that such collections of relation decoders can be highly compressed by simple order-3 tensor networks without significant loss in decoding accuracy. To explain this surprising redundancy, we develop a cross-evaluation protocol, in which we apply each linear decoder operator to the subjects of every other relation. Our results reveal that these linear maps do not encode distinct relations, but extract recurring, coarse-grained semantic properties (e.g., country of capital city and country of food are both in the country-of-X property). This property-centric structure clarifies both the operators' compressibility and highlights why they generalize only to new relations that are semantically close. Our findings thus interpret linear relational decoding in transformer language models as primarily property-based, rather than relation-specific.",
+    "keywords": [
+      "large language models",
+      "relations",
+      "tensor networks",
+      "interpretability"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=XsBzmJzJ2l"
+  },
+  {
+    "id": "gOG9Zoyn4R",
+    "number": 29103,
+    "title": "KLASS: KL-Guided Fast Inference in Masked Diffusion Models",
+    "authors": [
+      "Seo Hyun Kim",
+      "Sunwoo Hong",
+      "Hojung Jung",
+      "Youngrok Park",
+      "Se-Young Yun"
+    ],
+    "abstract": "Masked diffusion models have demonstrated competitive results on various tasks including language generation. However, due to its iterative refinement process, the inference is often bottlenecked by slow and static sampling speed. To overcome this problem, we introduce `KL-Adaptive Stability Sampling' (KLASS), a fast yet effective sampling method that exploits token-level KL divergence to identify stable, high-confidence predictions. By unmasking multiple tokens in each iteration without any additional model training, our approach speeds up generation significantly while maintaining sample quality. On reasoning benchmarks, KLASS achieves up to $2.78\\times$ wall-clock speedups while improving performance over standard greedy decoding, attaining state-of-the-art results among diffusion-based samplers. We further validate KLASS across diverse domains, including text, image, and molecular generation, showing its effectiveness as a broadly applicable sampler across different models.",
+    "keywords": [
+      "Generative Models",
+      "Efficient Inference Methods"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=gOG9Zoyn4R"
+  },
+  {
+    "id": "JeP0lpusYw",
+    "number": 29077,
+    "title": "HM3: Hierarchical Multi-Objective Model Merging for Pretrained Models",
+    "authors": [
+      "Yu Zhou",
+      "Xingyu Wu",
+      "Jibin Wu",
+      "Liang Feng",
+      "KC Tan"
+    ],
+    "abstract": "Model merging is a technique that combines multiple large pretrained models into a single model, enhancing performance and broadening task adaptability without original data or additional training. However, most existing model merging methods focus primarily on exploring the parameter space, merging models with identical architectures. Despite its potential, merging in the architecture space remains in its early stages due to the vast search space and challenges related to layer compatibility. This paper designs a hierarchical model merging framework named HM3, formulating a bilevel multi-objective model merging problem across both parameter and architecture spaces. At the parameter level, HM3 integrates existing merging methods to quickly identify optimal parameters. Based on these, an actor-critic strategy with efficient policy discretization is employed at the architecture level to explore inference paths with Markov property in the layer-granularity search space for reconstructing these optimal models. By training reusable policy and value networks, HM3 learns Pareto optimal models to provide customized solutions for various tasks. Experimental results on language and vision tasks demonstrate that HM3 outperforms methods focusing solely on the parameter or architecture space.",
+    "keywords": [
+      "Large language model",
+      "model merging",
+      "multi-objective optimization",
+      "architecture-level merging"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=JeP0lpusYw"
+  },
+  {
+    "id": "RDbuSCWhad",
+    "number": 28967,
+    "title": "Structured Sparse Transition Matrices to Enable State Tracking in State-Space Models",
+    "authors": [
+      "Aleksandar Terzic",
+      "Nicolas Menet",
+      "Michael Hersche",
+      "Thomas Hofmann",
+      "Abbas Rahimi"
+    ],
+    "abstract": "Modern state-space models (SSMs) often utilize structured transition matrices\nwhich enable efficient computation but pose restrictions on the model’s expressivity,\nas measured in terms of the ability to emulate finite-state automata (FSA). While\nunstructured transition matrices are optimal in terms of expressivity, they come\nat a prohibitively high compute and memory cost, even for moderate state sizes.\nWe propose a structured sparse parametrization of transition matrices in SSMs\nthat enables FSA state tracking with provably optimal state size and depth, while\nkeeping the computational cost of the recurrence comparable to that of diagonal\nSSMs. Our method, \\emph{PD-SSM}, parametrizes the transition matrix as the product\nof a column one-hot matrix ($P$) and a complex-valued diagonal matrix ($D$). As\na result, the computational cost of parallel scans scales linearly with the state\nsize. Theoretically, the model is BIBO-stable and can emulate any $N$-state FSA\nwith one layer of dimension $N$ and a linear readout of size $N ×N$, significantly\nimproving on all current structured SSM guarantees. Experimentally, the model\nsignificantly outperforms a wide collection of modern SSM variants on various FSA\nstate tracking tasks. On multivariate time-series classification, it outperforms neural\ncontrolled differential equations, a paradigm explicitly built for time-series analysis.\nFinally, we integrate PD-SSM into a hybrid Transformer-SSM architecture and\ndemonstrate that the model can effectively track the states of a complex FSA in\nwhich transitions are encoded into sets of variable-length English sentences. The\ncode is available at https://github.com/IBM/expressive-sparse-state-space-model.",
+    "keywords": [
+      "State-Space Models",
+      "Expressiveness",
+      "Efficiency",
+      "Matrix Parametrisation",
+      "State-Tracking",
+      "Finite-State Automata"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=RDbuSCWhad"
+  },
+  {
+    "id": "Ve693NkzcU",
+    "number": 28905,
+    "title": "Twilight: Adaptive Attention Sparsity with Hierarchical Top-$p$  Pruning",
+    "authors": [
+      "Chaofan Lin",
+      "Jiaming Tang",
+      "Shuo Yang",
+      "Hanshuo Wang",
+      "Tian Tang",
+      "Boyu Tian",
+      "Ion Stoica",
+      "Song Han",
+      "Mingyu Gao"
+    ],
+    "abstract": "Leveraging attention sparsity to accelerate long-context large language models (LLMs) has been of great importance recently. However, most existing sparse attention algorithms use a fixed budget of how many tokens to use in their computations. This simple static decision raises critical issues in real-world deployment because it fails to account for the dynamic nature of real-world scenarios, where the optimal balance between accuracy and efficiency can vary greatly. \nIn this paper, we reveal a key insight that leveraging the idea of top-$p$ sampling (a.k.a., nucleus sampling) in sparse attention could enable efficient and adaptive budget decisions. Based on this, we propose Twilight, a framework that enhances any existing sparse attention algorithm with adaptive budget decision capabilities without sacrificing accuracy. \nEmpirical results show that Twilight can adaptively prune up to 98% tokens with nearly no accuracy loss in both mid- and long-context scenarios, leading to a $1.4\\times$ speedup over state-of-the-art sparse attention mechanisms.",
+    "keywords": [
+      "Large Language Model",
+      "Sparse Attention",
+      "Decode",
+      "KV Cache"
+    ],
+    "primary_area": "deep_learning",
+    "venue": "NeurIPS 2025 spotlight",
+    "decision": "spotlight",
+    "forum_url": "https://openreview.net/forum?id=Ve693NkzcU"
+  }
+]
