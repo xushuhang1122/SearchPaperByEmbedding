@@ -1,0 +1,551 @@
+{
+  "model": "ICLR",
+  "total_papers": 18,
+  "decision_counts": {
+    "poster": 18
+  },
+  "results_by_decision": {
+    "poster": {
+      "count": 18,
+      "papers": [
+        {
+          "paper": {
+            "id": "JtGPIZpOrz",
+            "number": 4829,
+            "title": "Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains",
+            "authors": [
+              "Vighnesh Subramaniam",
+              "Yilun Du",
+              "Joshua B. Tenenbaum",
+              "Antonio Torralba",
+              "Shuang Li",
+              "Igor Mordatch"
+            ],
+            "abstract": "Large language models (LLMs) have achieved remarkable performance in recent years but are fundamentally limited by the underlying training data. To improve models beyond the training data, recent works have explored how LLMs can be used to generate synthetic data for autonomous self-improvement. However, successive steps of self-improvement can reach a point of diminishing returns. In this work, we propose a complementary approach towards self-improvement where finetuning is applied to a multiagent society of language models. A group of language models, all starting from the same base model, are independently specialized by updating each one using data generated through multiagent interactions among the models. By training each model on independent sets of data, we illustrate how this approach enables specialization across models and diversification over the set of models. As a result, our overall system is able to preserve diverse reasoning chains and autonomously improve over many more rounds of fine-tuning than single-agent self-improvement methods. We quantitatively illustrate the efficacy of the approach across a wide suite of reasoning tasks.",
+            "keywords": [
+              "Language Models",
+              "Multi-agent Interaction",
+              "Self Improvement"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=JtGPIZpOrz",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6477652851193003
+        },
+        {
+          "paper": {
+            "id": "S9GyQUXzee",
+            "number": 1830,
+            "title": "GROOT-2: Weakly Supervised Multimodal Instruction Following Agents",
+            "authors": [
+              "Shaofei Cai",
+              "Bowei Zhang",
+              "Zihao Wang",
+              "Haowei Lin",
+              "Xiaojian Ma",
+              "Anji Liu",
+              "Yitao Liang"
+            ],
+            "abstract": "Developing agents that can follow multimodal instructions remains a fundamental challenge in robotics and AI. Although large-scale pre-training on unlabeled datasets has enabled agents to learn diverse behaviors, these agents often struggle with following instructions. While augmenting the dataset with instruction labels can mitigate this issue, acquiring such high-quality annotations at scale is impractical. \nTo address this issue, we frame the problem as a semi-supervised learning task and introduce \\agent, a multimodal instructable agent trained using a novel approach that combines weak supervision with latent variable models. Our method consists of two key components: constrained self-imitating, which utilizes large amounts of unlabeled demonstrations to enable the policy to learn diverse behaviors, and human intention alignment, which uses a smaller set of labeled demonstrations to ensure the latent space reflects human intentions. \\agent’s effectiveness is validated across four diverse environments, ranging from video games to robotic manipulation, demonstrating its robust multimodal instruction-following capabilities.",
+            "keywords": [
+              "Reinforcement Learning",
+              "Open-world Agent",
+              "Weakly Supervised Learning",
+              "Goal-Conditioned Policy"
+            ],
+            "primary_area": "reinforcement learning",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=S9GyQUXzee",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6460459485109887
+        },
+        {
+          "paper": {
+            "id": "gfI9v7AbFg",
+            "number": 12980,
+            "title": "Strategist: Self-improvement of LLM Decision Making via Bi-Level Tree Search",
+            "authors": [
+              "Jonathan Light",
+              "Min Cai",
+              "Weiqin Chen",
+              "Guanzhi Wang",
+              "Xiusi Chen",
+              "Wei Cheng",
+              "Yisong Yue",
+              "Ziniu Hu"
+            ],
+            "abstract": "Traditional reinforcement learning and planning require a lot of data and training to develop effective strategies. On the other hand, large language models (LLMs) can generalize well and perform tasks without prior training but struggle with complex planning and decision-making. We introduce **STRATEGIST**, a new approach that combines the strengths of both methods. It uses LLMs to generate and update high-level strategies in text form, while a Monte Carlo Tree Search (MCTS) algorithm refines and executes them. STRATEGIST is a general framework that optimizes strategies through self-play simulations without requiring any training data. We test STRATEGIST in competitive, multi-turn games with partial information, such as **Game of Pure Strategy (GOPS)** and **The Resistance: Avalon**, a multi-agent hidden-identity discussion game. Our results show that STRATEGIST-based agents outperform traditional reinforcement learning models, other LLM-based methods, and existing LLM agents while achieving performance levels comparable to human players.",
+            "keywords": [
+              "LLMs",
+              "games",
+              "search",
+              "self-improvement",
+              "self-play",
+              "RL",
+              "agent",
+              "multi-agent",
+              "planning",
+              "decision-making",
+              "Monte Carlo Tree Search",
+              "hierarchical learning",
+              "strategy optimization",
+              "reinforcement learning",
+              "game AI",
+              "strategic reasoning",
+              "population-based training",
+              "adversarial learning",
+              "policy refinement",
+              "social deduction games",
+              "partially observable environments",
+              "heuristic learning",
+              "evolutionary strategies."
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=gfI9v7AbFg",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6376362041644966
+        },
+        {
+          "paper": {
+            "id": "qn9tBYQHGi",
+            "number": 12286,
+            "title": "Do LLM Agents  Have Regret? A Case Study in Online Learning and Games",
+            "authors": [
+              "Chanwoo Park",
+              "Xiangyu Liu",
+              "Asuman E. Ozdaglar",
+              "Kaiqing Zhang"
+            ],
+            "abstract": "Large language models (LLMs) have been increasingly employed for (interactive) decision-making, via the development of LLM-based autonomous agents. Despite their emerging successes, the performance of LLM agents in decision-making has not been fully investigated through quantitative metrics, especially in the multi-agent setting when they interact with each other, a typical scenario in real-world LLM-agent applications. To better understand the limits of LLM agents in these interactive environments, we propose to study their interactions in benchmark decision-making settings in online learning and game theory, through the performance metric of regret. We first empirically study the no-regret behaviors of LLMs in canonical non-stochastic online learning problems, as well as the emergence of equilibria when LLM agents interact through playing repeated games. We then provide some theoretical insights into the no-regret behaviors of LLM agents, under certain assumptions on the supervised pre-training and the rationality model of human decision-makers who generate the data. Notably, we also identify (simple) cases where advanced LLMs such as GPT-4 fail to be no-regret. To further promote the no-regret behaviors, we propose a novel unsupervised training loss of regret-loss, which, in contrast to the supervised pre-training loss, does not require the labels of (optimal) actions. Finally, we establish the statistical guarantee of generalization bound for regret-loss minimization, and more importantly, the optimization guarantee that minimizing such a loss may automatically lead to known no-regret learning algorithms, when single-layer self-attention models are used. Our further experiments demonstrate the effectiveness of our regret-loss, especially in addressing the above “regrettable” cases.",
+            "keywords": [
+              "LLM agents",
+              "online learning",
+              "repeated games"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=qn9tBYQHGi",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6369343975545586
+        },
+        {
+          "paper": {
+            "id": "GkWA6NjePN",
+            "number": 11667,
+            "title": "Multi-agent cooperation through learning-aware policy gradients",
+            "authors": [
+              "Alexander Meulemans",
+              "Seijin Kobayashi",
+              "Johannes von Oswald",
+              "Nino Scherrer",
+              "Eric Elmoznino",
+              "Blake Aaron Richards",
+              "Guillaume Lajoie",
+              "Blaise Aguera y Arcas",
+              "Joao Sacramento"
+            ],
+            "abstract": "Self-interested individuals often fail to cooperate, posing a fundamental challenge for multi-agent learning. How can we achieve cooperation among self-interested, independent learning agents? Promising recent work has shown that in certain tasks cooperation can be established between ``learning-aware\" agents who model the learning dynamics of each other. Here, we present the first unbiased, higher-derivative-free policy gradient algorithm for learning-aware reinforcement learning, which takes into account that other agents are themselves learning through trial and error based on multiple noisy trials. We then leverage efficient sequence models to condition behavior on long observation histories that contain traces of the learning dynamics of other agents. Training long-context policies with our algorithm leads to cooperative behavior and high returns on standard social dilemmas, including a challenging environment where temporally-extended action coordination is required. Finally, we derive from the iterated prisoner's dilemma a novel explanation for how and when cooperation arises among self-interested learning-aware agents.",
+            "keywords": [
+              "multi-agent learning",
+              "reinforcement learning",
+              "decentralized training",
+              "social dilemmas",
+              "cooperation",
+              "iterated prisoner's dilemma",
+              "melting pot"
+            ],
+            "primary_area": "reinforcement learning",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=GkWA6NjePN",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6361832494883727
+        },
+        {
+          "paper": {
+            "id": "otW0TJOUYF",
+            "number": 8780,
+            "title": "Hypothetical Minds: Scaffolding Theory of Mind for Multi-Agent Tasks with Large Language Models",
+            "authors": [
+              "Logan Cross",
+              "Violet Xiang",
+              "Agam Bhatia",
+              "Daniel LK Yamins",
+              "Nick Haber"
+            ],
+            "abstract": "Multi-agent reinforcement learning (MARL) methods struggle with the non-stationarity of multi-agent systems and fail to adaptively learn online when tested with novel agents. Here, we leverage large language models (LLMs) to create an autonomous agent that can handle these challenges. Our agent, Hypothetical Minds, consists of a cognitively-inspired architecture, featuring modular components for perception, memory, and hierarchical planning over two levels of abstraction. We introduce the Theory of Mind module that scaffolds the high-level planning process by generating hypotheses about other agents' strategies in natural language. It then evaluates and iteratively refines these hypotheses by reinforcing hypotheses that make correct predictions about the other agents' behavior. Hypothetical Minds significantly improves performance over previous LLM-agent and RL baselines on a range of competitive, mixed motive, and collaborative domains in the Melting Pot benchmark, including both dyadic and population-based environments. Additionally, comparisons against LLM-agent baselines and ablations reveal the importance of hypothesis evaluation and refinement for succeeding on complex scenarios.",
+            "keywords": [
+              "LLM agents",
+              "language agents",
+              "theory of mind",
+              "multi-agent"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=otW0TJOUYF",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6345602329527815
+        },
+        {
+          "paper": {
+            "id": "vodsIF3o7N",
+            "number": 3815,
+            "title": "On the Modeling Capabilities of Large Language Models for Sequential Decision Making",
+            "authors": [
+              "Martin Klissarov",
+              "R Devon Hjelm",
+              "Alexander T Toshev",
+              "Bogdan Mazoure"
+            ],
+            "abstract": "Large pretrained models are showing increasingly better performance in reasoning and planning tasks across different modalities, opening the possibility to leverage them for complex sequential decision making problems. In this paper, we investigate the capabilities of Large Language Models (LLMs) for reinforcement learning (RL) across a diversity of interactive domains. We evaluate their ability to produce decision-making policies, either directly, by generating actions, or indirectly, by first generating reward models to train an agent with RL. Our results show that, even without task-specific fine-tuning, LLMs excel at reward modeling. In particular, crafting rewards through artificial intelligence (AI) feedback yields the most generally applicable approach and can enhance performance by improving credit assignment and exploration. Finally, in environments with unfamiliar dynamics, we explore how fine-tuning LLMs with synthetic data can significantly improve their reward modeling capabilities while mitigating catastrophic forgetting, further broadening their utility in sequential decision-making tasks.",
+            "keywords": [
+              "reinforcement learning",
+              "large language models",
+              "ai agents",
+              "preference based learning",
+              "reward design"
+            ],
+            "primary_area": "reinforcement learning",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=vodsIF3o7N",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6312980988606709
+        },
+        {
+          "paper": {
+            "id": "t6QHYUOQL7",
+            "number": 11487,
+            "title": "Breaking Mental Set to Improve Reasoning through Diverse Multi-Agent Debate",
+            "authors": [
+              "Yexiang Liu",
+              "Jie Cao",
+              "Zekun Li",
+              "Ran He",
+              "Tieniu Tan"
+            ],
+            "abstract": "Large Language Models (LLMs) have seen significant progress but continue to struggle with persistent reasoning mistakes.\nPrevious methods of *self-reflection* have been proven limited due to the models’ inherent fixed thinking patterns. \nWhile Multi-Agent Debate (MAD) attempts to mitigate this by incorporating multiple agents, it often employs the same reasoning methods, even though assigning different personas to models. This leads to a \"fixed mental set\", where models rely on homogeneous thought processes without exploring alternative perspectives.\nIn this paper, we introduce Diverse Multi-Agent Debate (DMAD), a method that encourages agents to think with distinct reasoning approaches. By leveraging diverse problem-solving strategies, each agent can gain insights from different perspectives, refining its responses through discussion and collectively arriving at the optimal solution. DMAD effectively breaks the limitations of fixed mental sets. We evaluate DMAD against various prompting techniques, including *self-reflection* and traditional MAD, across multiple benchmarks using both LLMs and Multimodal LLMs. Our experiments show that DMAD consistently outperforms other methods, delivering better results than MAD in fewer rounds. Code is available at https://github.com/MraDonkey/DMAD.",
+            "keywords": [
+              "Multi-Agent Debate",
+              "Large Language Models",
+              "Multimodal Large Language Models",
+              "Prompting",
+              "Self-Correction",
+              "Reasoning"
+            ],
+            "primary_area": "generative models",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=t6QHYUOQL7",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6289269675587165
+        },
+        {
+          "paper": {
+            "id": "nfKfAzkiez",
+            "number": 12819,
+            "title": "ACC-Collab: An Actor-Critic Approach to Multi-Agent LLM Collaboration",
+            "authors": [
+              "Andrew Estornell",
+              "Jean-Francois Ton",
+              "Yuanshun Yao",
+              "Yang Liu"
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated a remarkable ability to serve as general-purpose tools for various language-based tasks. \n  Recent works have demonstrated that the efficacy of such models can be improved through iterative dialog between multiple models.\n  While these \n  paradigms show promise \n  in\n  improving model efficacy, most works in this area treat collaboration as an emergent behavior, rather than a learned behavior. \n  In doing so, current multi-agent frameworks rely on collaborative behaviors to have been sufficiently trained into off-the-shelf models. \n  To address this limitation, we propose ACC-Collab, an **A**ctor-**C**riti**c** based learning framework to produce a two-agent team (an actor-agent and a critic-agent) specialized in collaboration.\n  We demonstrate that ACC-Collab outperforms SotA multi-agent techniques on a wide array of benchmarks.",
+            "keywords": [
+              "Multi-Agent Collaboration",
+              "LLM Agents",
+              "Preference Optimization"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=nfKfAzkiez",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6270303076399905
+        },
+        {
+          "paper": {
+            "id": "K3n5jPkrU6",
+            "number": 18,
+            "title": "Scaling Large Language Model-based Multi-Agent Collaboration",
+            "authors": [
+              "Chen Qian",
+              "Zihao Xie",
+              "YiFei Wang",
+              "Wei Liu",
+              "Kunlun Zhu",
+              "Hanchen Xia",
+              "Yufan Dang",
+              "Zhuoyun Du",
+              "Weize Chen",
+              "Cheng Yang",
+              "Zhiyuan Liu",
+              "Maosong Sun"
+            ],
+            "abstract": "Recent breakthroughs in large language model-driven autonomous agents have revealed that multi-agent collaboration often surpasses each individual through collective reasoning. Inspired by the neural scaling law—increasing neurons enhances performance, this study explores whether the continuous addition of collaborative agents can yield similar benefits. Technically, we utilize directed acyclic graphs to organize agents into a multi-agent collaboration network (MacNet), upon which their interactive reasoning is topologically orchestrated for autonomous task solving. Extensive evaluations reveal that it effectively supports collaboration among over a thousand agents, with irregular topologies outperforming regular ones. We also identify a collaborative scaling law—the overall performance follows a logistic growth pattern as agents scale, with collaborative emergence occurring earlier than traditional neural emergence. We speculate this may be because scaling agents catalyzes their multidimensional considerations during interactive reflection and refinement, thereby producing more comprehensive artifacts. The code is available at https://github.com/OpenBMB/ChatDev/tree/macnet.",
+            "keywords": [
+              "Large Language Model",
+              "Autonomous Agent",
+              "Multi-Agent Collaboration",
+              "Interactive Reasoning"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=K3n5jPkrU6",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.624981489229087
+        },
+        {
+          "paper": {
+            "id": "Kak2ZH5Itp",
+            "number": 13855,
+            "title": "Language Imbalance Driven Rewarding for Multilingual Self-improving",
+            "authors": [
+              "Wen Yang",
+              "Junhong Wu",
+              "Chen Wang",
+              "Chengqing Zong",
+              "Jiajun Zhang"
+            ],
+            "abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across numerous tasks. However, these advancements have predominantly benefited \"first-class\" languages such as English and Chinese, leaving many other languages underrepresented. This imbalance, while limiting broader applications, generates a natural preference ranking between languages, offering an opportunity to bootstrap the multilingual capabilities of LLM in a self-improving manner. Thus, we propose $\\textit{Language Imbalance Driven Rewarding}$, where the inherent imbalance between dominant and non-dominant languages within LLMs is leveraged as a reward signal. Iterative DPO training demonstrates that this approach not only enhances LLM performance in non-dominant languages but also improves the dominant language's capacity, thereby yielding an iterative reward signal. Fine-tuning Meta-Llama-3-8B-Instruct over two iterations of this approach results in continuous improvements in multilingual performance across instruction-following and arithmetic reasoning tasks, evidenced by an average improvement of 7.46\\% win rate on the X-AlpacaEval leaderboard and 13.9\\% accuracy on the MGSM benchmark. This work serves as an initial exploration, paving the way for multilingual self-improvement of LLMs.",
+            "keywords": [
+              "Large Language Model",
+              "Self-Improving",
+              "Multilinguality"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=Kak2ZH5Itp",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6243480866981272
+        },
+        {
+          "paper": {
+            "id": "DI4gW8viB6",
+            "number": 5145,
+            "title": "Competing Large Language Models in Multi-Agent Gaming Environments",
+            "authors": [
+              "Jen-tse Huang",
+              "Eric John Li",
+              "Man Ho LAM",
+              "Tian Liang",
+              "Wenxuan Wang",
+              "Youliang Yuan",
+              "Wenxiang Jiao",
+              "Xing Wang",
+              "Zhaopeng Tu",
+              "Michael Lyu"
+            ],
+            "abstract": "Decision-making is a complex process requiring diverse abilities, making it an excellent framework for evaluating Large Language Models (LLMs). Researchers have examined LLMs' decision-making through the lens of Game Theory. However, existing evaluation mainly focus on two-player scenarios where an LLM competes against another. Additionally, previous benchmarks suffer from test set leakage due to their static design. We introduce GAMA($\\gamma$)-Bench, a new framework for evaluating LLMs' Gaming Ability in Multi-Agent environments. It includes eight classical game theory scenarios and a dynamic scoring scheme specially designed to quantitatively assess LLMs' performance. $\\gamma$-Bench allows flexible game settings and adapts the scoring system to different game parameters, enabling comprehensive evaluation of robustness, generalizability, and strategies for improvement. Our results indicate that GPT-3.5 demonstrates strong robustness but limited generalizability, which can be enhanced using methods like Chain-of-Thought. We also evaluate 13 LLMs from 6 model families, including GPT-3.5, GPT-4, Gemini, LLaMA-3.1, Mixtral, and Qwen-2. Gemini-1.5-Pro outperforms others, scoring of $69.8$ out of $100$, followed by LLaMA-3.1-70B ($65.9$) and Mixtral-8x22B ($62.4$). Our code and experimental results are publicly available at https://github.com/CUHK-ARISE/GAMABench.",
+            "keywords": [
+              "Large Language Models",
+              "Games",
+              "Reasoning",
+              "Evaluation"
+            ],
+            "primary_area": "alignment, fairness, safety, privacy, and societal considerations",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=DI4gW8viB6",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6208531188714839
+        },
+        {
+          "paper": {
+            "id": "moWiYJuSGF",
+            "number": 13861,
+            "title": "Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation",
+            "authors": [
+              "Hyungjoo Chae",
+              "Namyoung Kim",
+              "Kai Tzu-iunn Ong",
+              "Minju Gwak",
+              "Gwanwoo Song",
+              "Jihoon Kim",
+              "Sunghwan Kim",
+              "Dongha Lee",
+              "Jinyoung Yeo"
+            ],
+            "abstract": "Large language models (LLMs) have recently gained much attention in building autonomous agents. However, performance of current LLM-based web agents in long-horizon tasks is far from optimal, often yielding errors such as repeatedly buying a non-refundable flight ticket. By contrast, humans can avoid such an irreversible mistake, as we have an awareness of the potential outcomes (e.g., losing money) of our actions, also known as the \"world model\". Motivated by this, our study first starts with preliminary analyses, confirming the absence of world models in current LLMs (e.g., GPT-4o, Claude-3.5-Sonnet, etc.). Then, we present a World-model-augmented (WMA) web agent, which simulates the outcomes of its actions for better decision-making. To overcome the challenges in training LLMs as world models predicting next observations, such as repeated elements across observations and long HTML inputs, we propose a transition-focused observation abstraction, where the prediction objectives are free-form natural language descriptions exclusively highlighting important state differences between time steps. Experiments on WebArena and Mind2Web show that our world models improve agents' policy selection without training and demonstrate our agents' cost- and time-efficiency compared to recent tree-search-based agents.",
+            "keywords": [
+              "Web Agent",
+              "World Model",
+              "Digital Agent",
+              "Planning",
+              "LLM"
+            ],
+            "primary_area": "applications to robotics, autonomy, planning",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=moWiYJuSGF",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6164897935421084
+        },
+        {
+          "paper": {
+            "id": "womU9cEwcO",
+            "number": 1719,
+            "title": "Scaling Autonomous Agents via Automatic Reward Modeling And Planning",
+            "authors": [
+              "Zhenfang Chen",
+              "Delin Chen",
+              "Rui Sun",
+              "Wenjun Liu",
+              "Chuang Gan"
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across a range of text-generation tasks. However, LLMs still struggle with problems requiring multi-step decision-making and environmental feedback, such as online shopping, scientific reasoning, and mathematical problem-solving. Unlike pure text data, collecting large-scale decision-making data is challenging. Moreover, many powerful LLMs are only accessible through APIs, which hinders their fine-tuning for agent tasks due to cost and complexity. To address LLM agents' limitations, we propose a framework that can automatically learn a reward model from the environment without human annotations. This model can be used to evaluate the action trajectories of LLM agents and provide heuristics for task planning. Specifically, our approach involves employing one LLM-based agent to navigate an environment randomly, generating diverse action trajectories. Subsequently, a separate LLM is leveraged to assign a task intent and synthesize a negative response alongside the correct response for each trajectory. These triplets (task intent, positive response, and negative response) are then utilized as training data to optimize a reward model capable of scoring action trajectories. This reward model can be integrated with LLM-based agents and various planning algorithms to enhance task-solving performance. The effectiveness and generalizability of our framework are demonstrated through evaluations conducted on different agent benchmarks. In conclusion, our proposed framework represents a significant advancement in enhancing LLM agents' decision-making capabilities. By automating the learning of reward models, we overcome the challenges of data scarcity and API limitations, potentially revolutionizing the application of LLMs in complex and interactive environments. This research paves the way for more sophisticated AI agents capable of tackling a wide range of real-world problems requiring multi-step decision-making.",
+            "keywords": [
+              "agents",
+              "large language models",
+              "planning"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=womU9cEwcO",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6141277987606523
+        },
+        {
+          "paper": {
+            "id": "r1KcapkzCt",
+            "number": 14005,
+            "title": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+            "authors": [
+              "Zijing Shi",
+              "Meng Fang",
+              "Ling Chen"
+            ],
+            "abstract": "Text-based games provide valuable environments for language-based autonomous agents. However, planning-then-learning paradigms, such as those combining Monte Carlo Tree Search (MCTS) and reinforcement learning (RL), are notably time-consuming due to extensive iterations. Additionally, these algorithms perform uncertainty-driven exploration but lack language understanding and reasoning abilities.\nIn this paper, we introduce the Monte Carlo planning with Dynamic Memory-guided Large language model (MC-DML) algorithm. MC-DML leverages the language understanding and reasoning capabilities of Large Language Models (LLMs) alongside the exploratory advantages of tree search algorithms. Specifically, we enhance LLMs with in-trial and cross-trial memory mechanisms, enabling them to learn from past experiences and dynamically adjust action evaluations during planning. We conduct experiments on a series of text-based games from the Jericho benchmark. Our results demonstrate that the MC-DML algorithm significantly enhances performance across various games at the initial planning phase, outperforming strong contemporary methods that require multiple iterations. This demonstrates the effectiveness of our algorithm, paving the way for more efficient language-grounded planning in complex environments.",
+            "keywords": [
+              "Large language model",
+              "Monte Carlo tree search",
+              "Text-based games"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=r1KcapkzCt",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6086059429429027
+        },
+        {
+          "paper": {
+            "id": "Dl6nkKKvlX",
+            "number": 8091,
+            "title": "Balancing Act: Diversity and Consistency in Large Language Model Ensembles",
+            "authors": [
+              "Ahmed Abdulaal",
+              "Chen Jin",
+              "Nina Montaña-Brown",
+              "Aryo Pradipta Gema",
+              "Daniel C. Castro",
+              "Daniel C. Alexander",
+              "Philip Alexander Teare",
+              "Tom Diethe",
+              "Dino Oglic",
+              "Amrutha Saseendran"
+            ],
+            "abstract": "Ensembling strategies for Large Language Models (LLMs) have demonstrated significant potential in improving performance across various tasks by combining the strengths of individual models. However, identifying the most effective ensembling method remains an open challenge, as neither maximizing output consistency through self-consistency decoding nor enhancing model diversity via frameworks like \"Mixture of Agents\" has proven universally optimal.  Motivated by this, we propose a unified framework to examine the trade-offs between task performance, model diversity, and output consistency in ensembles. More specifically, we introduce a consistency score that defines a gating mechanism for mixtures of agents and an algorithm for mixture refinement to investigate these trade-offs at the semantic and model levels, respectively. We incorporate our insights into a novel inference-time LLM ensembling strategy called the Dynamic Mixture of Agents (DMoA) and demonstrate that it achieves a new state-of-the-art result in the challenging Big Bench Hard mixed evaluations benchmark. Our analysis reveals that cross-validation bias can enhance performance, contingent on the expertise of the constituent models. We further demonstrate that distinct reasoning tasks—such as arithmetic reasoning, commonsense reasoning, and instruction following—require different model capabilities, leading to inherent task-dependent trade-offs that DMoA balances effectively.",
+            "keywords": [
+              "LLM",
+              "ensembling",
+              "diversity",
+              "consistency",
+              "mixture of agents",
+              "self decoding"
+            ],
+            "primary_area": "foundation or frontier models, including LLMs",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=Dl6nkKKvlX",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6056260113136673
+        },
+        {
+          "paper": {
+            "id": "FGSgsefE0Y",
+            "number": 2182,
+            "title": "MMRole: A Comprehensive Framework for Developing and Evaluating Multimodal Role-Playing Agents",
+            "authors": [
+              "Yanqi Dai",
+              "Huanran Hu",
+              "Lei Wang",
+              "Shengjie Jin",
+              "Xu Chen",
+              "Zhiwu Lu"
+            ],
+            "abstract": "Recently, Role-Playing Agents (RPAs) have garnered increasing attention for their potential to deliver emotional value and facilitate sociological research.\nHowever, existing studies are primarily confined to the textual modality, unable to simulate humans' multimodal perceptual capabilities.\nTo bridge this gap, we introduce the concept of Multimodal Role-Playing Agents (MRPAs), and propose a comprehensive framework, MMRole, for their development and evaluation, which comprises a personalized multimodal dataset and a robust evaluation approach.\nSpecifically, we construct a large-scale, high-quality dataset, MMRole-Data, consisting of 85 characters, 11K images, and 14K single or multi-turn dialogues.\nAdditionally, we present a robust evaluation approach, MMRole-Eval, encompassing eight metrics across three dimensions, where a reward model is designed to score MRPAs with the constructed ground-truth data for comparison.\nMoreover, we develop the first specialized MRPA, MMRole-Agent.\nExtensive evaluation results demonstrate the improved performance of MMRole-Agent and highlight the primary challenges in developing MRPAs, emphasizing the need for enhanced multimodal understanding and role-playing consistency.\nThe data, code, and models are all available at https://github.com/YanqiDai/MMRole.",
+            "keywords": [
+              "Multimodal Role-Playing Agents",
+              "Large Multimodal Models"
+            ],
+            "primary_area": "datasets and benchmarks",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=FGSgsefE0Y",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6040445106120821
+        },
+        {
+          "paper": {
+            "id": "SIE6VFps9x",
+            "number": 4910,
+            "title": "Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training",
+            "authors": [
+              "Maximillian Chen",
+              "Ruoxi Sun",
+              "Tomas Pfister",
+              "Sercan O Arik"
+            ],
+            "abstract": "Large language models (LLMs), optimized through human feedback, have rapidly emerged as a leading paradigm for developing intelligent conversational assistants. However, despite their strong performance across many benchmarks, LLM-based agents might still lack conversational skills such as disambiguation -- when they are faced with ambiguity, they often overhedge or implicitly guess users' true intents rather than asking clarification questions. Under task-specific settings, high-quality conversation samples are often limited, constituting a bottleneck for LLMs' ability to learn optimal dialogue action policies. We propose Action-Based Contrastive Self-Training (ACT), a quasi-online preference optimization algorithm based on Direct Preference Optimization (DPO), that enables data-efficient dialogue policy learning in multi-turn conversation modeling. We demonstrate ACT's efficacy under data-efficient tuning scenarios, even when there is no action label available, using multiple real-world conversational tasks: tabular-grounded question-answering, machine reading comprehension, and AmbigSQL, a novel task for disambiguating information-seeking requests for complex SQL generation towards data analysis agents. Additionally, we propose evaluating LLMs' ability to function as conversational agents by examining whether they can implicitly recognize and reason about ambiguity in conversation. ACT demonstrates substantial conversation modeling improvements over standard tuning approaches like supervised fine-tuning and DPO.",
+            "keywords": [
+              "dialogue system",
+              "conversation modeling",
+              "reinforcement learning",
+              "mixed-initiative interaction",
+              "LLM",
+              "RLHF",
+              "domain adaptation",
+              "data-efficient learning",
+              "clarification questions"
+            ],
+            "primary_area": "applications to computer vision, audio, language, and other modalities",
+            "venue": "ICLR 2025 Poster",
+            "decision": "poster",
+            "forum_url": "https://openreview.net/forum?id=SIE6VFps9x",
+            "_source_file": "iclr_2025_poster.json"
+          },
+          "similarity": 0.6038163605769671
+        }
+      ]
+    }
+  }
+}

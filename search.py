@@ -2,18 +2,34 @@ import json
 import numpy as np
 import os
 import hashlib
+import requests
 from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # If python-dotenv is not installed, try to load .env manually
+    env_file = Path('.env')
+    if env_file.exists():
+        with open(env_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    os.environ[key.strip()] = value.strip()
+
 class PaperSearcher:
-    def __init__(self, papers_file, model_type="openai", api_key=None, base_url=None):
+    def __init__(self, papers_file, model_type="api", api_key=None, base_url=None):
         with open(papers_file, 'r', encoding='utf-8') as f:
             self.papers = json.load(f)
-        
+
         self.model_type = model_type
         self.cache_file = self._get_cache_file(papers_file, model_type)
         self.embeddings = None
-        
+
         if model_type == "openai":
             from openai import OpenAI
             self.client = OpenAI(
@@ -21,18 +37,30 @@ class PaperSearcher:
                 base_url=base_url
             )
             self.model_name = "text-embedding-3-large"
+        elif model_type == "api":
+            # New embedding API configuration
+            self.api_url = base_url or "https://cloud.infini-ai.com/maas/v1/embeddings"
+            self.api_key = api_key or os.getenv('EMBEDDING_API_KEY')
+            self.model_name = "bge-m3"
+            self.headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}"
+            }
         else:
             from sentence_transformers import SentenceTransformer
             self.model = SentenceTransformer('all-MiniLM-L6-v2')
             self.model_name = "all-MiniLM-L6-v2"
-        
+
         self._load_cache()
     
     def _get_cache_file(self, papers_file, model_type):
         base_name = Path(papers_file).stem
         file_hash = hashlib.md5(papers_file.encode()).hexdigest()[:8]
         cache_name = f"cache_{base_name}_{file_hash}_{model_type}.npy"
-        return str(Path(papers_file).parent / cache_name)
+        # Create cache directory in the project root
+        cache_dir = Path("cache")
+        cache_dir.mkdir(exist_ok=True)
+        return str(cache_dir / cache_name)
     
     def _load_cache(self):
         if os.path.exists(self.cache_file):
@@ -75,6 +103,48 @@ class PaperSearcher:
         
         return np.array(embeddings)
     
+    def _embed_api(self, texts):
+        if isinstance(texts, str):
+            texts = [texts]
+
+        embeddings = []
+        batch_size = 100  # Process in batches to avoid API limits
+
+        for i in range(0, len(texts), batch_size):
+            batch = texts[i:i + batch_size]
+
+            payload = {
+                "model": self.model_name,
+                "input": batch
+            }
+
+            try:
+                response = requests.post(self.api_url, json=payload, headers=self.headers)
+                response.raise_for_status()
+                result = response.json()
+
+                if "data" in result:
+                    batch_embeddings = [item["embedding"] for item in result["data"]]
+                    embeddings.extend(batch_embeddings)
+                else:
+                    print(f"Unexpected API response format: {result}")
+                    # Add zero embeddings as fallback
+                    zero_embedding = [0.0] * 1024  # Assuming BGE-M3 produces 1024-dim vectors
+                    embeddings.extend([zero_embedding] * len(batch))
+
+            except requests.exceptions.RequestException as e:
+                print(f"API request failed: {e}")
+                # Add zero embeddings as fallback
+                zero_embedding = [0.0] * 1024
+                embeddings.extend([zero_embedding] * len(batch))
+
+            # Add delay to avoid rate limiting
+            if i + batch_size < len(texts):
+                import time
+                time.sleep(0.1)
+
+        return np.array(embeddings)
+
     def _embed_local(self, texts):
         if isinstance(texts, str):
             texts = [texts]
@@ -90,6 +160,8 @@ class PaperSearcher:
         
         if self.model_type == "openai":
             self.embeddings = self._embed_openai(texts)
+        elif self.model_type == "api":
+            self.embeddings = self._embed_api(texts)
         else:
             self.embeddings = self._embed_local(texts)
         
@@ -111,6 +183,8 @@ class PaperSearcher:
             
             if self.model_type == "openai":
                 embs = self._embed_openai(texts)
+            elif self.model_type == "api":
+                embs = self._embed_api(texts)
             else:
                 embs = self._embed_local(texts)
             
@@ -119,6 +193,8 @@ class PaperSearcher:
         elif query:
             if self.model_type == "openai":
                 query_emb = self._embed_openai(query).reshape(1, -1)
+            elif self.model_type == "api":
+                query_emb = self._embed_api(query).reshape(1, -1)
             else:
                 query_emb = self._embed_local(query).reshape(1, -1)
         else:
